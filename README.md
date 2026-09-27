@@ -336,3 +336,49 @@ Public Search Result
 ```
 
 Maltego was also used to expand the email entity through available search-engine transforms.
+
+---
+# 🛡️ 4.5  Footprinting with the Google Hacking Database (GHDB)
+
+**Google Hacking (Dorking)** uses advanced search operators to find hidden, publicly accessible data without directly interacting with the target.
+
+It highlights the security implications of misconfigured internet-facing IoT devices and exposed document.
+
+## Tools & Resources
+ 
+| Tool / Resource | Purpose |
+|---|---|
+| [Google Search](https://www.google.com) | Executing dork queries |
+| [Exploit-DB GHDB](https://www.exploit-db.com/google-hacking-database) | Source of dork syntax, categorized by type |
+| Browser (Chrome) | Verifying and viewing results |
+
+## Task 1: Exposed Security Camera Feeds
+ 
+**Goal:** Find 10 live, publicly accessible security camera links using GHDB dorks.
+ 
+| No. | Link | Dork Used | Username / Password |
+|---|---|---|---|
+| 1 | `http://122.116.41.8:8080/` | `intitle:"webcamXP" inurl:8080` | — |
+| 2 | `http://99.114.240.169:8080/` | `intitle:"Webcam" inurl:WebCam.htm` | — |
+| 3 | *(pending)* | `intitle:"Login" intext:"camera"` | — |
+| 4 | *(pending)* | `intitle:"Index of /cam/"` | — |
+| 5 | *(pending)* | `intitle:"Network Camera" inurl:main.cgi` | — |
+| 6 | `skylinewebcams.com` — Piazza di Spagna / Piazza Cavour, Rome | `inurl:webcam site:skylinewebcams.com inurl:roma` | — |
+
+## Task 2: Downloadable Mathematics eBooks (PDF)
+ 
+**Goal:** Find 10 open directory listings containing downloadable mathematics eBooks in PDF format.
+ 
+| No. | Link | Dork Used |
+|---|---|---|
+| 1 | `https://www.skylineuniversity.ac.ae/pdf/math/` | `intitle:index.of "parent directory" mathematics pdf` |
+| 2 | `https://education.giakonda.org.uk/Maths/Additional_Mathematics__Pure_and_Applied.pdf` | *(same category — open index)* |
+| 3 | `http://erewhon.superkuh.com/library/Math/` | *(same category — open index)* |
+| 4 | `https://www.netlib.org/math/docpdf/` | *(same category — open index)* |
+| 5 | `http://inis.jinr.ru/sl/vol2/Mathematics/Math.Encyclopedia/Pdf/` | *(same category — open index)* |
+| 6 | `https://naac.matagujricollege.org/Syllabus/2016-17/Mathematics/syllabus2016-17/` | *(same category — open index)* |
+| 7 | `https://lira.epac.to/DOCS-TECH/Math/Engineering%20and%20Applied/` | *(same category — open index)* |
+| 8 | `https://docs.bartonccc.edu/syllabus/Master/MATH/` | *(same category — open index)* |
+| 9 | `https://www.math.utah.edu/~cherk/teach/5740MathModeling/12mathmodel/sources/` | *(same category — open index)* |
+| 10 | `http://www.issp.ac.ru/ebooks/books/open/` | *(same category — open index)* |
+
