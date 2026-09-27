@@ -125,7 +125,8 @@ Each tool provided a different perspective of the target's publicly observable i
 WHOIS was used to collect publicly available domain registration information and identify relevant domain infrastructure, including name-server information.
 
 ```text
-The domain is registered through GoDaddy with WHOIS privacy enabled via Domains By Proxy, so the true registrant's identity and contact details are not publicly exposed.
+The domain is registered through GoDaddy with WHOIS privacy enabled via Domains By Proxy
+The true registrant's identity and contact details are not publicly exposed.
 ```
 
 **Security relevance:**
@@ -235,6 +236,30 @@ DNS information can help create a broader understanding of an organization's pub
 
 ---
 
+# 🛡️ 4.2 OSINT Reconnaissance with theHarvester
 
+`` theHarvester `` was used to gather publicly available information about:
 
+`` microsoft.com ``
 
+Full reconnaissance run used for this report:
+
+```text
+theHarvester -d microsoft.com -l 50 -b all
+```
+
+The exercise collected publicly available information including:
+
+- ASNs
+- IP addresses
+- Email addresses
+- Hostnames
+- Subdomains
+- Interesting URLs
+
+| **Category	Result** | **Result** |
+|---|---|
+| **ASNs found** | 8 |
+| 🪟 **IP addresses found** | 52 unique IPv4/IPv6 addresses associated with microsoft.com infrastructure |
+| **Email addresses found** | 3  (dotnet-docker-bot@microsoft.com, opencode@microsoft.com, secure@microsoft.com) |
+| **WhatWeb** | Web technology and CMS fingerprinting |
