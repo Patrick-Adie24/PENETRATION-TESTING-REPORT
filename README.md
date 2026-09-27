@@ -266,7 +266,7 @@ The exercise collected publicly available information including:
 | **Interesting URLs found** | 2  — an Azure AD / Microsoft Entra OAuth2 authorize URL referencing a Cloudflare Access endpoint <br>the Microsoft privacy statement page |
 
 ```text
-The hostname results were collected from available public OSINT sources and do not by themselves indicate that every discovered hostname is directly accessible or vulnerable.
+> **Important:** The hostname results were collected from available public OSINT sources and do not by themselves indicate that every discovered hostname is directly accessible or vulnerable.
 ```
 
 ---
@@ -288,3 +288,53 @@ The Windows `ipconfig` command was first used to identify the local network conf
 
 The identified subnet was then entered into Zenmap.
 
+Command:
+
+```text
+> nmap -sn 192.168.100.21/24
+```
+
+The scan identified:
+
+```text
+> 13 Live Hosts
+```
+
+The scan was used to identify active devices on the local network.
+
+### Example Hosts Identified
+
+```text
+10.0.0.1
+10.0.0.4
+10.0.0.19
+10.0.0.5
+```
+
+The practical example also identified associated MAC addresses.
+
+After completing the scan, the **Topology** section in Zenmap was used to visualize the discovered network.
+
+The topology legend was enabled and the resulting network topology was saved in PDF format as required by the practical exercise.
+
+> **Important:** The addresses above represent the example results supplied for the practical. When submitting the final assessment, they should be replaced with the actual results from my authorized local network.
+
+---
+
+# 🛡️ 4.4 OSINT Link Analysis with Maltego
+
+Maltego Community Edition 4.12.1 was used to perform graph-based OSINT analysis.
+
+The investigation established a relationship between the target domain and a publicly identified email address.
+
+```text
+networkwalks.com
+       │
+       ▼
+info@networkwalks.com
+       │
+       ▼
+Public Search Result
+```
+
+Maltego was also used to expand the email entity through available search-engine transforms.
