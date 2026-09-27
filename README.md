@@ -103,7 +103,138 @@ Each activity was documented with:
 
 # 🛡️ 4. Activities Performed
 
-## 4.1 🔍 Footprinting
+## 4.1 🔍 Footprinting & Reconnaissance
+
+Authorized reconnaissance was conducted against the **networkwalks.com** domain utilizing six specialized tools within the Kali Linux:
+
+```text
+WHOIS
+WhatWeb
+Nslookup
+curl
+Wafw00f
+DNSRecon
+```
+
+Each tool provided a different perspective of the target's publicly observable infrastructure.
+
+---
+
+### 🔹 4.1.1 WHOIS
+
+WHOIS was used to collect publicly available domain registration information and identify relevant domain infrastructure, including name-server information.
+
+```text
+The domain is registered through GoDaddy with WHOIS privacy enabled via Domains By Proxy, so the true registrant's identity and contact details are not publicly exposed.
+```
+
+**Security relevance:**
+
+WHOIS information can provide an initial understanding of how a domain is registered and which infrastructure is associated with it.
+
+---
+
+### 🔹 4.1.2 WhatWeb
+
+WhatWeb was used to fingerprint technologies exposed by the website.
+
+The observed results identified technologies including:
+
+```text
+WordPress 7.1.1
+WP Download Manager plugin (v3.3.58)
+```
+
+**Security relevance:**
+
+Technology and version information can assist security professionals in identifying software that may require additional security review.
+
+> 🛡️ Technology identification does **not** automatically indicate that a vulnerability exists.
+
+---
+
+### 🔹 4.1.3 Nslookup
+
+Nslookup was used to resolve the target domain to its associated IP address.
+
+```text
+nslookup networkwalks.com
+```
+
+**Observed result:**
+
+```text
+192.232.216.135
+```
+
+**Security relevance:**
+
+IP resolution provides information about the network location associated with a web service and may support further authorized infrastructure analysis.
+
+---
+
+### 🔹 4.1.4 cURL
+
+The following HTTP-header inspection technique was used:
+
+```bash
+curl -I networkwalks.com
+```
+
+The response provided additional information about the web application and exposed the following REST API endpoint:
+
+```text
+/wp-json/
+```
+
+**Security relevance:**
+
+HTTP response information can assist with technology fingerprinting and further authorized enumeration.
+
+---
+
+### 🔹 4.1.5 Wafw00f
+
+Wafw00f was used to determine whether a Web Application Firewall was protecting the target.
+
+```text
+wafw00f networkwalks.com
+```
+
+**Observed result:**
+
+```text
+ModSecurity (SpiderLabs)Web Application Firewall
+```
+
+**Security relevance:**
+
+Identifying defensive technologies can help security professionals understand the security architecture protecting a web application.
+
+---
+
+### 🔹 4.1.6 DNSRecon
+
+DNSRecon was used to enumerate publicly accessible DNS information.
+
+```text
+dnsrecon -d networkwalks.com
+```
+
+The activity provided information relating to:
+
+- Name servers
+- Mail servers
+- SPF / TXT records
+- Service records
+- DNS-related information
+
+**Security relevance:**
+
+DNS information can help create a broader understanding of an organization's publicly exposed infrastructure.
+
+---
+
 
 
 
