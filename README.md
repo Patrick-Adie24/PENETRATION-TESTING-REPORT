@@ -265,9 +265,7 @@ The exercise collected publicly available information including:
 | **Hosts / subdomains found** | Hosts / subdomains found	9,969 host names enumerated <br>(large mix of production, corporate, and internal-looking hostnames) |
 | **Interesting URLs found** | 2  — an Azure AD / Microsoft Entra OAuth2 authorize URL referencing a Cloudflare Access endpoint <br>the Microsoft privacy statement page |
 
-```text
 > **Important:** The hostname results were collected from available public OSINT sources and do not by themselves indicate that every discovered hostname is directly accessible or vulnerable.
-```
 
 ---
 
