@@ -260,6 +260,31 @@ The exercise collected publicly available information including:
 | **Category	Result** | **Result** |
 |---|---|
 | **ASNs found** | 8 |
-| 🪟 **IP addresses found** | 52 unique IPv4/IPv6 addresses associated with microsoft.com infrastructure |
+| **IP addresses found** | 52 unique IPv4/IPv6 addresses associated with microsoft.com infrastructure |
 | **Email addresses found** | 3  (dotnet-docker-bot@microsoft.com, opencode@microsoft.com, secure@microsoft.com) |
-| **WhatWeb** | Web technology and CMS fingerprinting |
+| **Hosts / subdomains found** | Hosts / subdomains found	9,969 host names enumerated <br>(large mix of production, corporate, and internal-looking hostnames) |
+| **Interesting URLs found** | 2  — an Azure AD / Microsoft Entra OAuth2 authorize URL referencing a Cloudflare Access endpoint <br>the Microsoft privacy statement page |
+
+```text
+The hostname results were collected from available public OSINT sources and do not by themselves indicate that every discovered hostname is directly accessible or vulnerable.
+```
+
+---
+
+# 🛡️ 4.3 Network Scanning with Zenmap
+
+A local network discovery scan was performed against the authorized local subnet.
+
+The objective was to:
+
+- Identify the local IP address
+- Determine the local subnet
+- Discover active hosts
+- Identify IP addresses
+- Identify MAC addresses
+- Generate a network topology
+
+The Windows `ipconfig` command was first used to identify the local network configuration.
+
+The identified subnet was then entered into Zenmap.
+
