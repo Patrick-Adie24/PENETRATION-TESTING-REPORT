@@ -11,7 +11,7 @@
 ![Authorized](https://img.shields.io/badge/Authorized-Yes-white)
 
 **W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS**
-### 👤 Adie Patrick Betiang
+### 👨‍💻 Adie Patrick Betiang
 **Cybersecurity Professional | Networkwalks Intern | Batch B083**
 
 ---
@@ -71,7 +71,39 @@ The project covers:
 
 The activities were performed against authorized targets, publicly available information sources, and the tester's own local network.
 
+Each activity was documented with:
+
+- 🖥️ Command/tool used
+- 📊 Observed result
+- 📸 Supporting evidence
+- 🔎 Security relevance
+- ⚠️ Potential risk
+- 🛡️ Recommended mitigation
+
 ---
+
+# 🛡️ 3. Tools & Technologies
+
+| **Tool / Technology** | **Purpose** |
+|---|---|
+| 🐉 **Kali Linux** | Security testing and reconnaissance environment |
+| 🪟 **Windows** | Local network identification and Zenmap environment |
+| 🔍 **WHOIS** | Domain registration and name-server information |
+| 🌐 **WhatWeb** | Web technology and CMS fingerprinting |
+| 📡 **Nslookup** | DNS resolution and IP identification |
+| 📥 **curl** | HTTP response header analysis |
+| 🛡️ **Wafw00f** | Web Application Firewall identification |
+| 🗂️ **DNSRecon** | DNS record enumeration |
+| 🛰️ **Zenmap / Nmap GUI** | Network discovery and host scanning |
+| 🕵️‍♂️ **theHarvester 4.10.1** | Passive OSINT collection |
+| 🗺️ **Maltego CE 4.12.1** | OSINT and relationship analysis |
+| 💻 **Windows CMD** | Local IP and MAC address identification |
+
+---
+
+# 🛡️ 4. Activities Performed
+
+## 4.1 🔍 Footprinting
 
 
 
