@@ -300,13 +300,14 @@ The scan identified:
 
 The scan was used to identify active devices on the local network.
 
-### Example Hosts Identified
+### Example Hosts Identified:
 
 ```text
-10.0.0.1
-10.0.0.4
-10.0.0.19
-10.0.0.5
+192.168.100.1
+192.168.100.7
+192.168.100.80
+192.168.100.99
+192.168.100.114
 ```
 
 The practical example also identified associated MAC addresses.
@@ -360,10 +361,7 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 |---|---|---|---|
 | 1 | `http://122.116.41.8:8080/` | `intitle:"webcamXP" inurl:8080` | — |
 | 2 | `http://99.114.240.169:8080/` | `intitle:"Webcam" inurl:WebCam.htm` | — |
-| 3 | *(pending)* | `intitle:"Login" intext:"camera"` | — |
-| 4 | *(pending)* | `intitle:"Index of /cam/"` | — |
-| 5 | *(pending)* | `intitle:"Network Camera" inurl:main.cgi` | — |
-| 6 | `skylinewebcams.com` — Piazza di Spagna / Piazza Cavour, Rome | `inurl:webcam site:skylinewebcams.com inurl:roma` | — |
+| 3 | `skylinewebcams.com` — Piazza di Spagna / Piazza Cavour, Rome | `inurl:webcam site:skylinewebcams.com inurl:roma` | — |
 
 ## Task 2: Downloadable Mathematics eBooks (PDF)
  
@@ -382,3 +380,358 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 | 9 | `https://www.math.utah.edu/~cherk/teach/5740MathModeling/12mathmodel/sources/` | *(same category — open index)* |
 | 10 | `http://www.issp.ac.ru/ebooks/books/open/` | *(same category — open index)* |
 
+---
+# 🛡️ 5. Risk Analysis & Impact
+
+The following observations were identified during the footprinting and network discovery activities.
+
+| # | 🔎 Finding | 📊 Evidence / Observation | ⚠️ Potential Impact | Risk |
+|---:|---|---|---|---|
+| 1 | Web technology information exposed | WhatWeb identified WordPress and WP Download Manager | Could assist technology fingerprinting and further security review | 🟠 **Medium** |
+| 2 | Server IP identifiable | Nslookup resolved the domain to `192.232.216.135` | Provides information about the network location of the web service | 🟢 **Low** |
+| 3 | HTTP technical information exposed | curl returned HTTP headers and exposed `/wp-json/` | May assist fingerprinting and further enumeration | 🟢 **Low** |
+| 4 | WAF technology identifiable | Wafw00f identified ModSecurity | Reveals information about the web application's defensive architecture | 🟢 **Low** |
+| 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail and service records | Can assist in building an infrastructure profile | 🟠 **Medium** |
+| 6 | Employee/functional email addresses exposed | theHarvester identified 3 email addresses tied to engineering/operations functions at microsoft.com | Usable for phishing, spear-phishing, or credential-stuffing target lists | 🟢 **Low** |
+| 7 | Cloud/network infrastructure identifiable via ASN and IP data | 8 ASNs and 52 IP addresses were enumerated | an attacker map network ownership and hosting  | 🟢 **Low** |
+| 8 | Authentication/SSO endpoint discoverable | An indexed Microsoft Entra ID (Azure AD) OAuth2 authorize URL referencing a third-party Cloudflare  | Publicly indexed auth/SSO URLs can reveal third-party integrations and potential phishing/redirect abuse | 🟢 **Low** |
+| 9 | Multiple live hosts visible | Zenmap identified thirteen hosts in the example network | Unknown devices may represent unauthorized or unmanaged assets | 🟠 **Medium** |
+
+### Risk Rating Key
+
+| Indicator | Severity |
+|---|---|
+| 🔴 | **Critical** |
+| 🟠 | **Medium** |
+| 🟢 | **Low** |
+
+> **Important Assessment Note:**  
+> These findings represent observations from reconnaissance and network discovery activities. They are **not confirmed vulnerabilities**.
+
+No exploitation or vulnerability validation was performed during these two modules.
+
+The presence of a software version, IP address, DNS record, or HTTP endpoint does not by itself prove that a system is vulnerable.
+
+Additional authorized security testing would be required to validate any suspected vulnerability.
+
+---
+# 🛡️ 6. Recommendations
+
+Based on the observations collected during the assessment, the following security improvements are recommended.
+
+### 1️⃣ Review Publicly Exposed Technology Information
+
+Organizations should regularly review publicly exposed information relating to their CMS platforms, plugins, frameworks, and web technologies.
+
+### 2️⃣ Maintain Updated Software
+
+CMS platforms, plugins, frameworks, and other technologies should be regularly updated and monitored against current security advisories.
+
+### 3️⃣ Review HTTP Response Headers
+
+HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
+
+### 4️⃣ Review DNS Records
+
+DNS records should be periodically reviewed to ensure that only required information and services are publicly exposed.
+
+### 5️⃣ Properly Configure & Monitor the WAF
+
+The Web Application Firewall should remain enabled, properly configured, monitored, and regularly tuned according to the organization's security requirements.
+
+### 6️⃣ Perform Regular Internal Network Discovery
+
+Organizations should periodically scan their authorized internal networks to identify active devices and maintain visibility of their infrastructure.
+
+### 7️⃣ Investigate Unknown Devices
+
+Unexpected devices identified during network discovery should be investigated and verified.
+
+### 8️⃣ Maintain Network Documentation
+
+Network topology, IP addresses, devices, and infrastructure documentation should be maintained and updated regularly.
+
+### 9️⃣ Perform Security Testing Within an Authorized Scope
+
+All reconnaissance, scanning, enumeration, and security testing should be performed only against systems and networks where appropriate authorization has been obtained.
+
+---
+# 🛡️ 7. Security Assessment Summary
+
+| **Assessment Area** | **Status** |
+|---|---|
+| 🔎 Reconnaissance | ✅ Completed |
+| 🌐 Footprinting | ✅ Completed |
+| 🛰️ Network Discovery | ✅ Completed |
+| 🖥️ Host Identification | ✅ Completed |
+| 🗺️ Network Topology | ✅ Completed |
+| 💥 Exploitation | ⏳ Not Performed |
+| 🧪 Vulnerability Validation | ⏳ Not Performed |
+| 🚧 Advanced Testing | 🔄 In Progress |
+
+### Overall Assessment
+
+```text
+RECONNAISSANCE       ████████████████████ 100%
+FOOTPRINTING         ████████████████████ 100%
+NETWORK DISCOVERY    ████████████████████ 100%
+EXPLOITATION         ░░░░░░░░░░░░░░░░░░░░   0%
+```
+
+---
+
+# 🛡️ 8. Key Learning Outcomes
+
+Through these practical exercises, I developed hands-on experience with:
+
+- 🔎 Reconnaissance methodology
+- 🌐 Domain footprinting
+- 🧩 Web technology fingerprinting
+- 📡 DNS enumeration
+- 🛡️ WAF identification
+- 🛰️ Network discovery
+- 🖥️ Host identification
+- 📍 IP and MAC address analysis
+- 🗺️ Network topology visualization
+- 📝 Professional security documentation
+- ⚖️ Authorized security testing principles
+
+The exercises demonstrated how much information can be collected before exploitation is even considered.
+
+A cybersecurity professional must therefore understand both **how information can be discovered** and **how organizations can reduce unnecessary exposure**.
+
+---
+
+# 🛡️ 9. Conclusion
+
+During **Week 2 of my Cybersecurity & Ethical Hacking internship at Networkwalks**, I completed practical activities covering **reconnaissance, footprinting, and network scanning**.
+
+During the footprinting phase, I used multiple Kali Linux tools to collect and analyze publicly observable information about the target domain.
+
+I learned how:
+
+```text
+WHOIS       → Domain information
+WhatWeb     → Web technology fingerprinting
+Nslookup    → DNS / IP resolution
+cURL        → HTTP header inspection
+Wafw00f     → WAF identification
+DNSRecon    → DNS enumeration
+theHarvester → Cloud/network infrastructure identifiable via ASN and IP data
+Maltego     → Identify Domain and Email
+GHDB        → Advanced search operators for hidden and publicly accessible data
+```
+
+During the network scanning phase, I used **Zenmap** to discover active hosts within my authorized local network environment and examine IP, MAC address, and topology information.
+
+The exercises reinforced an important cybersecurity principle:
+
+> **Effective security testing begins with understanding the environment.**
+
+I also learned the importance of documenting security findings professionally by clearly explaining:
+
+```text
+What was performed
+        ↓
+What was discovered
+        ↓
+Why it matters
+        ↓
+What risk it may create
+        ↓
+How the risk can be reduced
+```
+
+Most importantly, these exercises reinforced the requirement that reconnaissance and scanning must always be conducted within an **authorized scope**.
+
+This project represents another step in my development as a cybersecurity professional and contributes to my ongoing practical experience in **ethical hacking, network security, reconnaissance, and security assessment**.
+
+---
+
+# 🛡️ 10. Evidence Collected
+
+Evidence from the practical activities is included below.
+
+### 🔎 Footprinting Evidence
+
+<details>
+<summary><b>WHOIS Results</b></summary>
+
+<img width="1365" height="739" alt="W2-PM1-TASK 1 My results of whois" src="https://github.com/user-attachments/assets/8927b327-1393-4ab3-8a20-de59c0ef5c4f" />
+
+</details>
+
+<details>
+<summary><b>WhatWeb Results</b></summary>
+
+<img width="1365" height="722" alt="W2-PM1-TASK 2 My results of whatweb" src="https://github.com/user-attachments/assets/bb95915b-224a-40bc-9999-987eb4b8148c" />
+
+</details>
+
+<details>
+<summary><b>Nslookup Results</b></summary>
+
+<img width="1365" height="767" alt="W2-PM1-TASK 3 My results of  nslookup" src="https://github.com/user-attachments/assets/990feb97-e50c-4c36-8a19-4c1bd8a97356" />
+
+</details>
+
+<details>
+<summary><b>cURL Results</b></summary>
+
+<img width="1365" height="716" alt="W2-PM1-TASK 4 My results of curl" src="https://github.com/user-attachments/assets/4607a39a-0273-4052-b35a-6bfa7f166a30" />
+
+</details>
+
+<details>
+<summary><b>Wafw00f Results</b></summary>
+
+<img width="1358" height="763" alt="W2-PM1-TASK 5 My results of wafw00f" src="https://github.com/user-attachments/assets/dc1eb10b-541c-41ee-9085-40cbb5df8faa" />
+
+</details>
+
+<details>
+<summary><b>DNSRecon Results</b></summary>
+
+<img width="1366" height="691" alt="W2-PM1-TASK 6 My results of dnsrecon" src="https://github.com/user-attachments/assets/f4a2b650-cb29-4bd0-b92f-d075065959d2" />
+
+</details>
+
+### 🌐 Zenmap Evidence
+
+<details>
+<summary><b>Windows IP Configuration</b></summary>
+
+<img width="1365" height="722" alt="Ipconfig" src="https://github.com/user-attachments/assets/e13537ef-b8d3-48b9-8be4-4625cfcd6436" />
+
+</details>
+
+<details>
+<summary><b>Zenmap Ping Scan</b></summary>
+
+_<img width="1363" height="729" alt="ping scan" src="https://github.com/user-attachments/assets/072b3373-d351-4cc3-bf7c-07ff28d1565e" />
+
+</details>
+
+<details>
+<summary><b>Zenmap Host Discovery</b></summary>
+
+<img width="1365" height="764" alt="Host !" src="https://github.com/user-attachments/assets/09f07033-3c63-4247-a96e-2e94d81aee93" />
+<img width="1349" height="720" alt="Host 2" src="https://github.com/user-attachments/assets/acaa608f-1386-4436-bf70-6056808cb82d" />
+
+
+</details>
+
+<details>
+<summary><b>Zenmap Network Topology</b></summary>
+
+<img width="1365" height="727" alt="Topology" src="https://github.com/user-attachments/assets/0dd7fbe1-57f1-4086-840a-81c44cc013c8" />
+
+</details>
+
+---
+
+# 🛡️ 11. Networkwalks Academy Quiz Assessment
+
+As part of the Networkwalks Academy cybersecurity training program, I completed a short knowledge assessment covering concepts related to the practical modules and cybersecurity activities studied during the program.
+
+### 🏆 Quiz Performance
+
+| **Assessment** | **Details** |
+|---|---|
+| 🎓 **Academy** | Networkwalks Academy |
+| 📚 **Program** | Cybersecurity |
+| 📅 **Assessment Date** | August 2026 |
+| 🧪 **Assessment Type** | Short Knowledge Quiz |
+| 📊 **Score** | **[29% 10/10]** |
+| ✅ **Result** | **Passed / Completed** |
+
+### 📸 Score Evidence
+
+<img width="1365" height="753" alt="1" src="https://github.com/user-attachments/assets/0f1b4787-01ef-4d9c-baa2-ae9f6c4d6f91" />
+<img width="1365" height="766" alt="2" src="https://github.com/user-attachments/assets/58b8f42b-65f9-4d53-9dbb-2f9bdeab3d9d" />
+
+
+> 🏅 **Achievement:** Successfully completed the Networkwalks Academy knowledge assessment as part of my cybersecurity training and practical learning journey.
+
+---
+
+### 🛡️ Learning Validation
+
+The quiz provided an opportunity to validate my understanding of the cybersecurity concepts covered during the training, complementing the hands-on practical activities documented in this repository.
+
+**Knowledge Assessment → Practical Lab → Evidence → Professional Documentation**
+
+
+---
+
+# 🛡️ Assessment Progress
+
+```text
+PHASE 1
+Reconnaissance & Footprinting
+████████████████████████████████  COMPLETED ✅
+
+PHASE 2
+Scanning & Network Discovery
+████████████████████████████████  COMPLETED ✅
+
+PHASE 3
+Vulnerability Assessment
+████████████████░░░░░░░░░░░░░░░░  IN PROGRESS 🔄
+
+PHASE 4
+Exploitation
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  PENDING ⏳
+
+PHASE 5
+Reporting & Remediation
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  PENDING ⏳
+```
+
+---
+
+# 👨‍💻 Author
+
+<div align="center">
+
+### **Adie Patrick Betiang**
+
+**Cybersecurity Professional | Networkwalks Intern | Batch B083**
+
+[![LinkedIn]]()
+
+[![GitHub]()](https://github.com/)
+
+</div>
+
+---
+
+# 🛡️ Project Information
+
+| **Project Detail** | **Information** |
+|---|---|
+| 🏢 **Program** | Cybersecurity Program Networkwalks |
+| 📅 **Week** | Week 02 |
+| 🎓 **Batch** | B083 |
+| 🔐 **Project Type** | Authorized Penetration Testing Lab |
+| 🔎 **Primary Focus** | Footprinting & Network Scanning |
+| 🐉 **Primary OS** | Kali Linux |
+| 🛰️ **Scanning Tool** | Zenmap / Nmap |
+| 📊 **Assessment Status** | In Progress |
+| 📁 **Repository** | GitHub |
+
+---
+
+<div align="center">
+
+### 🛡️ CYBERSECURITY • ETHICAL HACKING • NETWORK SECURITY
+
+**Learn → Practice → Analyze → Secure**
+
+<br>
+
+*W2-PM-FINAL | Networkwalks | B083 | September 2026*
+
+</div>
+
+---
