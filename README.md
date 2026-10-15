@@ -212,7 +212,7 @@ Wafw00f was used to determine whether a Web Application Firewall was protecting 
 wafw00f networkwalks.com
 ```
 
-![WAFW00F Firewall Detection Toolkit]()
+![WAFW00F Firewall Detection Toolkit](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/5.%20Screenshot_Wafwoof.png.png?raw=true)
 
 **Observed result:**
 
