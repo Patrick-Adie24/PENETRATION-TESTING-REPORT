@@ -125,7 +125,7 @@ Each tool provided a different perspective of the target's publicly observable i
 WHOIS was used to collect publicly available domain registration information and identify relevant domain infrastructure, including name-server information.
 
 
-![WHOIS Domain Information Retrieval]()
+![WHOIS Domain Information Retrieval](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/1.%20Screenshot_whois.png.png?raw=true)
 
 
 ```text
@@ -142,6 +142,8 @@ WHOIS information can provide an initial understanding of how a domain is regist
 ### 🔹 4.1.2 WhatWeb
 
 WhatWeb was used to fingerprint technologies exposed by the website.
+
+![WhatWeb Technology Fingerprinting]()
 
 The observed results identified technologies including:
 
@@ -165,6 +167,8 @@ Nslookup was used to resolve the target domain to its associated IP address.
 ```text
 nslookup networkwalks.com
 ```
+
+![nslookup DNS Resolution]()
 
 **Observed result:**
 
@@ -192,6 +196,8 @@ The response provided additional information about the web application and expos
 /wp-json/
 ```
 
+![curl HTTP Header Inspection]()
+
 **Security relevance:**
 
 HTTP response information can assist with technology fingerprinting and further authorized enumeration.
@@ -205,6 +211,8 @@ Wafw00f was used to determine whether a Web Application Firewall was protecting 
 ```text
 wafw00f networkwalks.com
 ```
+
+![WAFW00F Firewall Detection Toolkit]()
 
 **Observed result:**
 
@@ -233,6 +241,8 @@ The activity provided information relating to:
 - SPF / TXT records
 - Service records
 - DNS-related information
+
+![DNSRecon Record Sweeping]()
 
 **Security relevance:**
 
