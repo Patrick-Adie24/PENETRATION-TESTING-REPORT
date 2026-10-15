@@ -143,7 +143,7 @@ WHOIS information can provide an initial understanding of how a domain is regist
 
 WhatWeb was used to fingerprint technologies exposed by the website.
 
-![WhatWeb Technology Fingerprinting]()
+![WhatWeb Technology Fingerprinting](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/2.%20Screenshot_whatweb.png.jpeg?raw=true)
 
 The observed results identified technologies including:
 
