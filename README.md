@@ -393,6 +393,8 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 | 2 | `http://99.114.240.169:8080/` | `intitle:"Webcam" inurl:WebCam.htm` | — |
 | 3 | `skylinewebcams.com` — Piazza di Spagna / Piazza Cavour, Rome | `inurl:webcam site:skylinewebcams.com inurl:roma` | — |
 
+![Webcam 7 Exposed Interface]()
+
 > **Key Takeaway:** The system allows complete, unauthenticated access to the live feed and the camera's Pan, Tilt & Zoom (PTZ) control interface.
 
 ## Task 2: Downloadable Mathematics eBooks (PDF)
@@ -412,7 +414,7 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 | 9 | `https://www.math.utah.edu/~cherk/teach/5740MathModeling/12mathmodel/sources/` | *(same category — open index)* |
 | 10 | `http://www.issp.ac.ru/ebooks/books/open/` | *(same category — open index)* |
 
-
+![Open Directory Google Search]()
 > **Key Takeaway:** Poor server configurations often leak internal directories, allowing unauthorized data scraping of documents and media files.
 ---
 # 🛡️ 5. Risk Analysis & Impact
