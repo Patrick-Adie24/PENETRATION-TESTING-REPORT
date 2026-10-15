@@ -358,7 +358,7 @@ info@networkwalks.com
 Public Search Result
 ```
 
-![Maltego Graph Workspace]()
+![Maltego Graph Workspace](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/8.%20Screenshot_MaltegoGraph.png.png?raw=true)
 
 Maltego was also used to expand the email entity through available search-engine transforms.
 
