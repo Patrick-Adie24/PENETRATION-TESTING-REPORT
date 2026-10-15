@@ -314,8 +314,6 @@ The scan identified:
 13 Live Hosts
 ```
 
-![Zenmap Network Topology Visualization Map]()
-
 The scan was used to identify active devices on the local network.
 
 ### Example Hosts Identified:
@@ -331,6 +329,10 @@ The scan was used to identify active devices on the local network.
 The practical example also identified associated MAC addresses.
 
 After completing the scan, the **Topology** section in Zenmap was used to visualize the discovered network.
+
+![Zenmap Network Topology Visualization Map](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/7.%20Screenshot_Zenmap%20Subnet%20Ping%20Scan%20Topology%20Graph.png.png?raw=true)
+
+<h2 align="center">Zenmap Subnet Ping Scan Topology Graph</h2>
 
 The topology legend was enabled and the resulting network topology was saved in PDF format as required by the practical exercise.
 
