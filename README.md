@@ -196,7 +196,7 @@ The response provided additional information about the web application and expos
 /wp-json/
 ```
 
-![curl HTTP Header Inspection]()
+![curl HTTP Header Inspection](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/4.%20Screenshot_curl.png.png?raw=true)
 
 **Security relevance:**
 
