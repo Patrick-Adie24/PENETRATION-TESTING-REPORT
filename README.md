@@ -336,7 +336,7 @@ After completing the scan, the **Topology** section in Zenmap was used to visual
 
 The topology legend was enabled and the resulting network topology was saved in PDF format as required by the practical exercise.
 
-[📥 Zenmap Subnet Ping Scan Topology Graph (PDF)]()
+[📥 Zenmap Subnet Ping Scan Topology Graph (PDF)](Zenmap Network Topology Visualization Map.pdf)
 
 > **Important:** The addresses above represent the example results supplied for the practical. When submitting the final assessment, they should be replaced with the actual results from my authorized local network.
 
@@ -357,6 +357,8 @@ info@networkwalks.com
        ▼
 Public Search Result
 ```
+
+![Maltego Graph Workspace]()
 
 Maltego was also used to expand the email entity through available search-engine transforms.
 
