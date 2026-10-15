@@ -289,13 +289,13 @@ The identified subnet was then entered into Zenmap.
 Command:
 
 ```text
-> nmap -sn 192.168.100.21/24
+nmap -sn 192.168.100.21/24
 ```
 
 The scan identified:
 
 ```text
-> 13 Live Hosts
+13 Live Hosts
 ```
 
 The scan was used to identify active devices on the local network.
