@@ -168,7 +168,7 @@ Nslookup was used to resolve the target domain to its associated IP address.
 nslookup networkwalks.com
 ```
 
-![nslookup DNS Resolution]()
+![nslookup DNS Resolution](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/3.%20Screenshot_nslookup.png.png?raw=true)
 
 **Observed result:**
 
