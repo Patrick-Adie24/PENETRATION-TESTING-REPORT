@@ -393,7 +393,7 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 | 2 | `http://99.114.240.169:8080/` | `intitle:"Webcam" inurl:WebCam.htm` | — |
 | 3 | `skylinewebcams.com` — Piazza di Spagna / Piazza Cavour, Rome | `inurl:webcam site:skylinewebcams.com inurl:roma` | — |
 
-![Webcam 7 Exposed Interface]()
+![Webcam 7 Exposed Interface](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/9.%20Screenshot_Webcam%207%20Exposure.png.png?raw=true)
 
 > **Key Takeaway:** The system allows complete, unauthenticated access to the live feed and the camera's Pan, Tilt & Zoom (PTZ) control interface.
 
