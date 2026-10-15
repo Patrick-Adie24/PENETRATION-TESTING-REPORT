@@ -242,7 +242,7 @@ The activity provided information relating to:
 - Service records
 - DNS-related information
 
-![DNSRecon Record Sweeping]()
+![DNSRecon Record Sweeping](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/6.%20Screenshot_dnsrecon.png.png?raw=true)
 
 **Security relevance:**
 
