@@ -332,7 +332,7 @@ After completing the scan, the **Topology** section in Zenmap was used to visual
 
 ![Zenmap Network Topology Visualization Map](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/7.%20Screenshot_Zenmap%20Subnet%20Ping%20Scan%20Topology%20Graph.png.png?raw=true)
 
-<h2 align="center">Zenmap Subnet Ping Scan Topology Graph</h2>
+<h3 align="center">*Zenmap Subnet Ping Scan Topology Graph*</h3>
 
 The topology legend was enabled and the resulting network topology was saved in PDF format as required by the practical exercise.
 
