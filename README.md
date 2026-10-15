@@ -314,6 +314,8 @@ The scan identified:
 13 Live Hosts
 ```
 
+![Zenmap Network Topology Visualization Map]()
+
 The scan was used to identify active devices on the local network.
 
 ### Example Hosts Identified:
