@@ -360,9 +360,15 @@ Public Search Result
 
 ![Maltego Graph Workspace](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/8.%20Screenshot_MaltegoGraph.png.png?raw=true)
 
+<h3 align="center">Visualizing Email and Network Infrastructure Data Using Maltego</h3>
+
+> **Key Focus:** Use the central canvas to view the relationships between nodes and the Transform Output window at the bottom to monitor real-time execution.
+Use code with caution.
+
 Maltego was also used to expand the email entity through available search-engine transforms.
 
 ---
+
 # 🛡️ 4.5  Footprinting with the Google Hacking Database (GHDB)
 
 **Google Hacking (Dorking)** uses advanced search operators to find hidden, publicly accessible data without directly interacting with the target.
