@@ -684,7 +684,7 @@ As part of the Networkwalks Academy cybersecurity training program, I completed 
 
 ### 📸 Score Evidence
 
-<img width="1365" height="753" alt="1" src="https://github.com/user-attachments/assets/0f1b4787-01ef-4d9c-baa2-ae9f6c4d6f91" />
+<img width="1365" height="753" alt="Zenmap Screenshot Tool Evidence" src="https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/11.%20ScreenShot%20Tool_Zenmap%20evidence%20score.png.png?raw=true" />
 <img width="1365" height="766" alt="2" src="https://github.com/user-attachments/assets/58b8f42b-65f9-4d53-9dbb-2f9bdeab3d9d" />
 
 
