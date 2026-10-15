@@ -124,6 +124,10 @@ Each tool provided a different perspective of the target's publicly observable i
 
 WHOIS was used to collect publicly available domain registration information and identify relevant domain infrastructure, including name-server information.
 
+
+![WHOIS Domain Information Retrieval]()
+
+
 ```text
 The domain is registered through GoDaddy with WHOIS privacy enabled via Domains By Proxy
 The true registrant's identity and contact details are not publicly exposed.
