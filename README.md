@@ -414,7 +414,8 @@ It highlights the security implications of misconfigured internet-facing IoT dev
 | 9 | `https://www.math.utah.edu/~cherk/teach/5740MathModeling/12mathmodel/sources/` | *(same category — open index)* |
 | 10 | `http://www.issp.ac.ru/ebooks/books/open/` | *(same category — open index)* |
 
-![Open Directory Google Search]()
+![Open Directory Google Search](https://github.com/Patrick-Adie24/PENETRATION-TESTING-REPORT/blob/main/10.%20Screenshot_%20Directory%20Listing%20Google%20Search.png.png?raw=true)
+
 > **Key Takeaway:** Poor server configurations often leak internal directories, allowing unauthorized data scraping of documents and media files.
 ---
 # 🛡️ 5. Risk Analysis & Impact
