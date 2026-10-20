@@ -24,7 +24,7 @@
 |---|---|
 | 👤 **Pentester** | Adie Patrick Betiang |
 | 🎓 **Program / Batch** | B083 Networkwalks |
-| 📅 **Assessment Date** | 18 September 2026 |
+| 📅 **Assessment Date** | 20 October, 2026 |
 | 🧪 **Modules Completed** | W2-PM1 Multiple Kali Tools<br>W2-PM5 Zenmap Scanning |
 | 🎯 **Assessment Targets** | Networkwalks Authorized Target<br>microsoft.com (public OSINT reconnaissance only)<br>My Own Local LAN Network |
 | 🔐 **Authorization** | Written Permission Secured |
@@ -736,9 +736,8 @@ Reporting & Remediation
 
 **Cybersecurity Professional | Networkwalks Intern | Batch B083**
 
-[![LinkedIn]]()
-
-[![GitHub]()](https://github.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/patrick-adie-552840267)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/Patrick-Adie24)
 
 </div>
 
@@ -768,7 +767,7 @@ Reporting & Remediation
 
 <br>
 
-*W2-PM-FINAL | Networkwalks | B083 | September 2026*
+*W2-PM-FINAL | Networkwalks | B083 | October, 2026*
 
 </div>
 
